@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jason Westmark – Interactive Resume</title>
+  <title>Jason Westmark</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 <div class="content-wrapper">
 <div class="download-buttons">
-  <a href="jason-westmark-resume.pdf" class="download-button">PDF Resume</a>
-  <a href="jason-westmark-resume.docx" class="download-button">Word Resume</a>
+  <a href="/resumes/jason-westmark-resume.pdf" class="download-button">PDF Resume</a>
+  <a href="/resumes/jason-westmark-resume.docx" class="download-button">Word Resume</a>
 </div>
   <!-- Summary Section -->
   <section id="summary" class="section fade-in-section">
@@ -95,7 +95,7 @@
         <div class="goal-category child">
           <h3 class="child">Career Objectives</h3>
           <p class="child">
-		  Over the next 12–18 months, I’ll transition from supporting QA/UAT to leading full requirements cycles—writing 
+		  Over the next 12–18 months, I’ll transition from supporting QA/UAT to leading full requirements cycles - writing 
 		  user stories, overseeing UAT, earning PMI-PBA, and mastering Power BI dashboards. In the long run, I aim to become a Senior Business 
 		  Analyst or Product Owner, mentor junior team members, drive process automation, and serve as the go-to liaison between IT and 
 		  the business, championing data-driven change.</p>
