@@ -23,7 +23,7 @@
         <div class="summary-text">
           <h2 class="child">Summary</h2>
           <p class="child">
-            Hi! I’m Jason. I’m a Junior Business Analyst who thrives on turning messy data into clear, actionable insights, and making sure those insights actually help people. After graduating from Tallahassee State College (and now studying at Florida State University), I dove into QA/UAT testing for Five Points Group, where I learned the importance of both technical precision and empathetic communication with clients. My favorite part of business analysis is bridging the gap between “what the system does” and “what the user needs.” I love asking questions, mapping out workflows, and making complex requirements feel straightforward. I believe clear communication, curiosity, and a dash of creativity are what make projects—and teams—truly succeed.
+            Hi! I’m Jason. I’m a Junior Business Analyst who thrives on turning messy data into clear, actionable insights, and making sure those insights actually help people. After graduating from Tallahassee State College (and now studying at Florida State University), I dove into QA/UAT testing for Five Points Group, where I learned the importance of both technical precision and empathetic communication with clients. My favorite part of business analysis is bridging the gap between “what the system does” and “what the user needs.” I love asking questions, mapping out workflows, and making complex requirements feel straightforward. I believe clear communication, curiosity, and a dash of creativity are what make projects - and teams - truly succeed.
           </p>
         </div>
         <div class="summary-photo child">
@@ -116,7 +116,7 @@
     <!-- TOP ROW: Image on left, text on right -->
     <div class="hobbies-row child">
       <div class="hobby-image-left">
-        <img src="../img/dance.jpg" alt="Hobby Image Left" />
+        <img src="img/dance.jpg" alt="Hobby Image Left" />
       </div>
       <div class="hobbies-text-right">
         <p>
@@ -129,7 +129,7 @@
     <!-- BOTTOM ROW: Text on left, image on right -->
     <div class="hobbies-row child">
 	<div class="hobby-image-right">
-        <img src="../img/piano.jpg" alt="Hobby Image Right" />
+        <img src="img/piano.jpg" alt="Hobby Image Right" />
       </div>
       <div class="hobbies-text-left">
         <p>

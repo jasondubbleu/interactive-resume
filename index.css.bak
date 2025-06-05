@@ -12,7 +12,7 @@ body {
   background: linear-gradient(
     to bottom,
     #f0f0f0 0%,
-    #8a8a8a 100%
+    #000000 100%
   );
 }
 
@@ -384,6 +384,21 @@ body {
 
 
 /* --- Contact Section --- */
+
+/* Force Contact to be a single, centered column */
+#contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center the inner content */
+  margin-top: 2rem;     /* keep your existing spacing */
+}
+
+/* If there’s any leftover two‐column rule, override it */
+#contact .contact-content > div {
+  width: auto;
+  max-width: none;
+}
+
 #contact .contact-content {
   margin-top: 2rem;
 }
