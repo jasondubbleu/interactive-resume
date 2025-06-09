@@ -81,7 +81,6 @@ window.addEventListener("scroll", () => {
     setActiveLabel(active);
   }, 100);  // 100ms debounce delay
 });
-
 	  // Initialize on page load
 	rotatePointer(ANGLES["summary"]);
 	setActiveLabel("summary");

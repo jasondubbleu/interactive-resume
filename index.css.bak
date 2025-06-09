@@ -531,7 +531,7 @@ body {
 .nav-dial {
   position: fixed;
   bottom: 124px;
-  right: 140px;
+  right: 14px;
   width: 120px;            /* diameter of the dial */
   height: 120px;
   z-index: 20;             /* bring above other content */
