@@ -79,9 +79,8 @@
                 QA/UAT to leading full requirements cycles – writing user
                 stories, overseeing UAT, earning PMI-PBA, and mastering Power BI
                 dashboards. In the long run, I aim to become a Senior Business
-                Analyst or Product Owner, mentor junior team members, drive
-                process automation, and serve as the go-to liaison between IT
-                and the business, championing data-driven change.
+                Analyst, mentor junior team members, drive
+                process automation, and eventually make my way up to a Project Manager.
               </p>
             </div>
 
@@ -398,10 +397,11 @@
     <!-- End .content-wrapper -->
 
     <!-- Navigation Dial (fixed bottom-right) -->
+
  <div class="nav-container">                <!-- NEW wrapper -->
-  <button class="collapse-btn" aria-label="Collapse navigation dial">
-    «
-  </button>
+ 		<button class="collapse-btn" aria-label="Collapse navigation dial">
+			>>
+		</button>
     <nav class="nav-dial fade-in-section" aria-label="Section navigator">
       <div class="dial-wrapper">
         <div class="dial-face">
@@ -502,6 +502,22 @@
     bar.addEventListener('mouseleave', () => {
       tooltip.style.opacity = '0';
     });
+  });
+</script>
+
+<script>
+  // Grab the button and the nav-dial
+  const collapseBtn = document.querySelector('.collapse-btn');
+  const navDial    = document.querySelector('.nav-dial');
+
+  collapseBtn.addEventListener('click', () => {
+    const isCollapsed = navDial.classList.toggle('collapsed');
+    // Flip the arrow direction
+    collapseBtn.textContent = isCollapsed ? '<<' : '>>';
+    collapseBtn.setAttribute(
+      'aria-label',
+      isCollapsed ? 'Expand navigation dial' : 'Collapse navigation dial'
+    );
   });
 </script>
 

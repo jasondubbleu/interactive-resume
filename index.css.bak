@@ -337,7 +337,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease 0.2s;    /* delay before fading in */
   margin: 0;                             /* reset default <ul> margins */
-  list-style: none;
+  list-style-type: circle;
   padding-left: 0;
 }
 
@@ -435,14 +435,14 @@ body {
 .skill-category h3 {
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #333;
+  color: #FFFFFF;
   text-align: center;
 }
 
 .skill-category ul {
   list-style: none;
   padding-left: 1.5rem;
-  color: #555;
+  color: #FFFFFF;
 }
 
 .skill-category li {
@@ -451,6 +451,7 @@ body {
   display: flex;
   align-items: center;
   margin: 2rem 0rem;
+  color: #FFFFFF;
 }
 
 .skill-category.programming li {
@@ -466,7 +467,6 @@ body {
   height: auto;
   margin-right: 2rem;
   border-radius: 10px;
-  border-color: red;
   border-width: 2px;
   background-color: white;
   padding: 1rem;
@@ -479,6 +479,7 @@ body {
   justify-content: flex-start;  
   gap: 0.5rem;
   position: relative;
+}
 
 /* 2) Push the bar image onto its own “row” and let it stretch */
 .skill-bar {
@@ -498,9 +499,6 @@ body {
   order: 0;
 }
 
-.skill-item {
-  justify-content: center;
-}
 .skill-tooltip {
   position: fixed;           /* fixed so it follows the page scroll */
   pointer-events: none;      /* mouse can pass through */
@@ -868,9 +866,9 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  border: 3px solid #000000;
+  border: 3px solid #0b337f;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #5a9cec;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transform: translateY(8px); /* nudge dial downward for alignment */
   overflow: visible;
@@ -883,7 +881,7 @@ body {
   top: 50%;
   width: 4px;
   height: 45px;
-  background-color: #ffffff;
+  background-color: #0b337f;
   border-radius: 2px;
   transform-origin: 50% 100%;
   transform: translateX(-50%) translateY(-100%) rotate(-90deg);
@@ -903,7 +901,7 @@ body {
     translateX(-50%) 
     translateY(-16px);                 /* slight upward shift */
   text-decoration: none;
-  color: #000000;
+  color: #0b337f;
   font-size: 1.25rem;
   font-weight: 500;
   white-space: nowrap;
@@ -919,8 +917,8 @@ body {
 
 /* Active (selected) label style: white text on black background */
 .dial-label.active-label {
-  color: #fff;
-  background-color: #000;
+  color: #5a9cec;
+  background-color: #0b337f;
   padding: 2px 8px;
   border-radius: 15px;
 }
@@ -932,12 +930,87 @@ body {
   left: 50%;
   width: 2px;                /* thickness of the tick */
   height: 10px;              /* length from center to inside edge */
-  background-color: #fff;    /* white tick */
+  background-color: #0b337f;    /* white tick */
   transform-origin: 50% 0%;  
   transform: 
     rotate(var(--angle)) 
     translateY(-60px);       /* position at dial’s radius (half of 120px) */
   z-index: 3;                /* just above the dial face border */
+}
+
+/* 1) Make collapse-btn clickable (pointer-events) and always visible */
+.nav-dial .collapse-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: -2.5rem;       /* stick it just outside the dial circle */
+  pointer-events: all;  /* override the nav-dial’s none */
+  background: #0b337f;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-dial .collapse-btn:hover {
+  background: #000;
+}
+
+/* 2) Transition on the dial itself */
+.nav-dial {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* 3) Collapsed state: slide off to the right, fade out */
+.nav-dial.collapsed {
+  transform: translateX(150%); /* move 150% of its width to the right */
+  opacity: 0;
+  pointer-events: none;       /* ignore clicks while hidden */
+}
+
+/* 4) When expanded, restore */
+.nav-dial {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-container {
+  position: fixed;
+  bottom: 325px;
+  right: 0px;
+  z-index: 20;
+}
+
+.nav-container .collapse-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* your existing button styles… */
+}
+
+/* Base button style—match dial face & border */
+.nav-container .collapse-btn {
+  background-color: #5a9cec;   /* same as dial’s fill */
+  color: #0b337f;              /* same as dial’s border & pointer */
+  border: 2px solid #0b337f;   /* echo the dial’s outline */
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Hover state—swap to highlight the border color */
+.nav-container .collapse-btn:hover {
+  background-color: #0b337f;   /* now filled like the border */
+  color: #5a9cec;              /* text flips to the face color */
+}
+
+/* Active/pressed state */
+.nav-container .collapse-btn:active {
+  transform: scale(0.95);
 }
 
 

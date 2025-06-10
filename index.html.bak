@@ -398,10 +398,11 @@
     <!-- End .content-wrapper -->
 
     <!-- Navigation Dial (fixed bottom-right) -->
+
  <div class="nav-container">                <!-- NEW wrapper -->
-  <button class="collapse-btn" aria-label="Collapse navigation dial">
-    «
-  </button>
+ 		<button class="collapse-btn" aria-label="Collapse navigation dial">
+			>>
+		</button>
     <nav class="nav-dial fade-in-section" aria-label="Section navigator">
       <div class="dial-wrapper">
         <div class="dial-face">
@@ -481,6 +482,45 @@
         }
       }
     </script>
+	
+	<script>
+  // Create a single tooltip element and add to the page
+  const tooltip = document.createElement('div');
+  tooltip.className = 'skill-tooltip';
+  document.body.appendChild(tooltip);
+
+  // For every bar image
+  document.querySelectorAll('.skill-bar').forEach(bar => {
+    // On mouse move over the bar, update text & position
+    bar.addEventListener('mousemove', e => {
+      const text = bar.dataset.proficiency;
+      tooltip.textContent = `Proficiency: ${text}`;
+      tooltip.style.left = e.clientX + 'px';
+      tooltip.style.top  = e.clientY + 'px';
+      tooltip.style.opacity = '1';
+    });
+    // On leaving the bar, hide the tooltip
+    bar.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = '0';
+    });
+  });
+</script>
+
+<script>
+  // Grab the button and the nav-dial
+  const collapseBtn = document.querySelector('.collapse-btn');
+  const navDial    = document.querySelector('.nav-dial');
+
+  collapseBtn.addEventListener('click', () => {
+    const isCollapsed = navDial.classList.toggle('collapsed');
+    // Flip the arrow direction
+    collapseBtn.textContent = isCollapsed ? '<<' : '>>';
+    collapseBtn.setAttribute(
+      'aria-label',
+      isCollapsed ? 'Expand navigation dial' : 'Collapse navigation dial'
+    );
+  });
+</script>
 
     <script src="main.js"></script>
   </body>
