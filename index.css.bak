@@ -29,9 +29,8 @@ body {
 */
 .content-wrapper {
   background-color: #ffffff;             /* pure white */
-  border-radius: 12px;                   /* round the corners */
+  border-radius: 20px;                   /* round the corners */
   margin: 4rem auto 50rem auto;          /* vertical spacing above & massive spacing below */
-  padding: 0rem 0rem 2rem;               /* internal padding sides & bottom */
   max-width: 900px;                      /* constrain overall width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* very soft drop shadow */
   overflow: hidden;
@@ -60,19 +59,21 @@ body {
   max-width: 800px;
 }
 
-/* Adjust bottom padding only on the Contact section */
-#contact {
-  margin-top: 8rem;
-  padding-bottom: 13rem;          /* extra “floating” space below contact */
-}
-
 #summary {
   padding: 0rem 2rem 6rem 2rem;
+  background-color: white;
+  /* radial gradient: white in center, gray at edges */
+  background-image: radial-gradient(
+    circle at center,
+    white 0%,       /* start pure white right at the middle */
+    white 60%,      /* hold white out to 60% of the radius */
+    #ccc 100%       /* fade to gray by the edge */
+  );
 }
 
 #summary .site-header {
   display: block;              /* make it fill its “box” */
-  margin: .5rem -4rem 0rem -4rem;            /* pull it left/right by the container’s padding */
+  margin: -.5rem -4rem 0rem -4rem;            /* pull it left/right by the container’s padding */
   padding: .5rem 0rem;
   background-color: black;
   color: white;
@@ -87,7 +88,7 @@ body {
   - Larger, bold, colored, with light text-shadow 
 */
 .site-header h2.site-title {
-  color: #000000;
+  color: #FFFFFF;
   font-size: 3rem;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -224,6 +225,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;             /* center the .inner wrapper */
+  background-color: white;
+
+  /* radial gradient: white in center, gray at edges */
+  background-image: radial-gradient(
+    circle at center,
+    white 0%,       /* start pure white right at the middle */
+    white 60%,      /* hold white out to 60% of the radius */
+    #ccc 100%       /* fade to gray by the edge */
+  );
 }
 
 /* Constrain the width of .inner to match other sections */
@@ -257,8 +267,11 @@ body {
 .experience-header h3 {
   margin: 0 1rem 0 0;               /* right margin for spacing */
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 24px;
   width: 100%;
+  padding-left: 0rem;  
+  border-bottom: 2px solid transparent;
+  border-bottom-color: #c4c4c4;
 }
 
 .expand-btn {
@@ -324,8 +337,20 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease 0.2s;    /* delay before fading in */
   margin: 0;                             /* reset default <ul> margins */
-  padding-left: 1.5rem;                  /* keep bullet indentation */
+  list-style: none;
+  padding-left: 0;
 }
+
+#experience .org-logo {
+  width: 1.5rem;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+#experience .org-logo.five-points { width: 5rem; }
+#experience .org-logo.tcc        { width: 5rem; }
+#experience .org-logo.fsu        { width: 5rem; }
 
 .experience-details.expanded ul {
   opacity: 1;
@@ -345,6 +370,10 @@ body {
 
 .experience-education h3 {
   margin: 0 0 0.5rem 0;                   /* spacing below heading */
+  font-size: 22px;
+  border-bottom: 2px solid transparent;
+  border-bottom-color: #c4c4c4;
+  width: 100%;
 }
 
 .experience-education p {
@@ -362,6 +391,13 @@ body {
 #skills {
 	padding-bottom: 0rem;
 	padding-top: 0rem;
+	  background: linear-gradient(
+    to right,
+    #0b337f 0%,      
+    #0b337f 50%,     
+    #5a9cec 50%,     
+    #5a9cec 100%     
+  );
 }
 
 #skills .skills-content {
@@ -370,15 +406,8 @@ body {
   align-items: flex-start;
   text-align: left;
   gap: 2rem;
-  background: linear-gradient(
-    to right,
-    #0b337f 0%,      
-    #0b337f 50%,     
-    #5a9cec 50%,     
-    #5a9cec 100%     
-  );
-  margin: 0rem -4.5rem;
-  padding: 1rem;
+  padding: 1rem 0rem;
+  margin-right: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -386,7 +415,7 @@ body {
     flex-direction: row;     /* side-by-side */
     justify-content: center; /* center the pair */
     align-items: stretch;    /* make them same height */
-    gap: 2rem;
+    gap: 10rem;
   }
 }
 
@@ -394,7 +423,7 @@ body {
 	background-image: URL('img/skills.png');
 	margin: 0rem -5rem 0rem -5rem;
 	padding: 3rem;
-	color: #000000;
+	color: #FFFFFF;
 }
 
 /* Constrain each skill category column */
@@ -432,7 +461,7 @@ body {
 	color: #ffffff;
 }
 
-.skill-category li img {
+.skill-category li img.skill-icon {
   width: 5rem;        
   height: auto;
   margin-right: 2rem;
@@ -440,8 +469,58 @@ body {
   border-color: red;
   border-width: 2px;
   background-color: white;
-  padding: .5rem;
+  padding: 1rem;
 }
+
+.skill-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;      
+  justify-content: flex-start;  
+  gap: 0.5rem;
+  position: relative;
+
+/* 2) Push the bar image onto its own “row” and let it stretch */
+.skill-bar {
+  order: 1;              /* move it after the icon+text */
+  flex-basis: 100%;      /* force it to take a full line */
+  width: 100%;           /* stretch to the container’s width */
+  height: auto;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #636363;
+}
+
+/* 3) Make sure the icon & label stay together on the first line */
+.skill-item > .skill-icon,
+.skill-item > span {    /* the text node becomes an anonymous flex-item,
+                           so if you wrapped your labels in a <span>,
+                           target that—or just rely on the natural order */
+  order: 0;
+}
+
+.skill-item {
+  justify-content: center;
+}
+.skill-tooltip {
+  position: fixed;           /* fixed so it follows the page scroll */
+  pointer-events: none;      /* mouse can pass through */
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  white-space: nowrap;
+  transform: translate(-50%, -120%); /* sit above the cursor */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.skill-bar {
+	width: 20rem;
+}
+
+
 
 
 /* ===================
@@ -562,8 +641,6 @@ body {
     align-items: center;
   }
 
-  /* Top row: image left, text right (order already correct in HTML) */
-
   /* Bottom row: reverse order (text left, image right) */
   .hobbies-row:nth-child(3) {
     flex-direction: row-reverse;
@@ -572,12 +649,26 @@ body {
 
 /* Provide more space under Hobbies and Contact */
 #hobbies {
-  //padding-bottom: 12rem;  /* extra space beneath Hobbies */
+  background-color: white;
+  /* radial gradient: white in center, gray at edges */
+  background-image: radial-gradient(
+    circle at center,
+    white 0%,       /* start pure white right at the middle */
+    white 60%,      /* hold white out to 60% of the radius */
+    #ccc 100%       /* fade to gray by the edge */
+  );
 }
 
 /* ========================
    CONTACT SECTION STYLES
    ======================== */
+   
+#contact {
+  padding-bottom: 13rem;          /* extra “floating” space below contact */
+  background-image: URL('img/contact.png');
+  background-position: center center;
+  border-bottom: 0rem;
+}
 
 /* Center Contact content in a single column */
 #contact .contact-content {
@@ -585,29 +676,122 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  color: #FFFFFF;
+}
+
+#contact h2 {
+	color: white;
 }
 
 /* Override any lingering multi-column rules */
 #contact .contact-content > div {
-  width: auto;
-  max-width: none;
+  padding: 4rem;
+  color: #FFFFFF;
+  background-color: #0b337f;
+  border-radius: 30px;
 }
 
 /* Constrain and style the contact-info block */
 .contact-info {
   max-width: 400px;
+  margin: 0 auto;
   text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;      /* stack each contact-item vertically */
+  gap: 1rem;
 }
 
-.contact-info p {
+#contact a {
+	color: white;
+	text-decoration: bold;
+}
+
+.contact-info p, a {
   margin: 0.5rem 0;
-  color: #333;
-}
-
-.contact-info a {
-  color: #007acc;
+  color: #FFFFFF;
+  display: inline-flex;        /* lay icon + text in one row */
+  align-items: center;         /* vertically center them together */
+  gap: 0.5rem;                 /* space between icon and text */
   text-decoration: none;
 }
+
+/* Make each contact method a flex row with centered items */
+.contact-info .email,
+.contact-info .phone {
+  display: flex;           /* lay icon + text side by side */
+  align-items: center;     /* vertically center them */
+  gap: 0.5rem;             /* space between icon and text */
+  justify-content: center; /* center the whole group if needed */
+}
+
+#contact .contact-info img {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;          
+}
+
+#contact .email {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;         
+}
+
+#contact .phone {
+  background-color: white;
+  border-radius: 50%;
+  padding: .5rem;
+}
+
+/* lay the three social links out in a row, centered */
+#contact .contact-info p.child:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* stack each icon above its label */
+#contact .contact-info .social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: #67b2e8;        /* match your existing link color */
+}
+
+/* size the social icons */
+#contact .contact-info .social-link img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* style the separators */
+#contact .contact-info .separator {
+  color: #67b2e8;
+  line-height: 2rem;     /* align with the icons */
+}
+
+#contact .contact-info .social-link img {
+  background-color: white;   /* white circle behind icon */
+  border-radius: 50%;        /* make it round */
+  padding: 0.5rem;           /* size of the circle */
+  display: block;            /* avoid inline quirks */
+  width: 2rem;               /* keep icon size the same */
+  height: 2rem;
+  box-sizing: content-box;   /* ensure padding adds to total size */
+}
+
+/* (Optional) if the circles shrink or grow weirdly,
+   force a fixed outer dimension: */
+#contact .contact-info .social-link {
+  /* width: 3.5rem;   uncomment and tweak if needed */
+  /* height: 3.5rem; */
+}
+
 
 /* ==============================
    DOWNLOAD BUTTONS (TOP-LEFT)
@@ -618,9 +802,17 @@ body {
   display: flex;
   gap: 1rem;             /* space between buttons */
   margin-bottom: 0rem;
-  padding-top: 1.5rem;   /* space above the buttons */
+  padding-top: .75rem;   /* space above the buttons */
   padding-left: 2rem;
   padding-bottom: 1rem;
+  background-color: #ccc;
+  background-image: radial-gradient(
+    circle farthest-corner at bottom center,
+    white 0%,         /* pure white at the very bottom-center point */
+    white 20%,        /* white out to 20% of the radius */
+    transparent 80%   /* then fade to transparent (revealing the grey beneath) */
+  );
+  background-repeat: no-repeat;
 }
 
 /* Style for each “download” button */

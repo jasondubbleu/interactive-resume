@@ -105,11 +105,12 @@
 
           <!-- Work Experience Item -->
           <div class="experience-item">
-            <div class="experience-header">
-              <h3 class="child" id="work">Work</h3>
-              <span class="child"
-                >Junior Business Analyst - Five Points Group (Aug 2021 – Present)</span
-              >
+			<div class="experience-header">
+			  <h3 class="child" id="work">Work</h3>
+			  <span class="child">
+				<img class="org-logo five-points" src="icons/5ptg.webp" alt="Five Points Group logo"/>
+				Junior Business Analyst – Five Points Technology Group (Aug 2021 – Present)
+			  </span>
               <!-- Toggle button to show/hide details -->
               <button
                 class="child expand-btn"
@@ -152,15 +153,17 @@
           </div>
 
           <!-- Education -->
-          <div class="experience-education child">
-            <h3 class="child">Education</h3>
-            <p class="child">Tallahassee State College (Aug 2021 – Nov 2024)</p>
-            <p class="child">
-              Florida State University (Jan 2025 – Present; Expected
-              graduation: 2026)
-            </p>
-          </div>
-        </div>
+		<div class="experience-education child">
+		  <h3 class="child">Education</h3>
+		  <p class="child">
+			<img class="org-logo tcc" src="icons/tsc.png" alt="Tallahassee State College logo"/>
+			Tallahassee State College (Aug 2021 – Nov 2024)
+		  </p>
+		  <p class="child">
+			<img class="org-logo fsu" src="icons/fsu.svg" alt="Florida State University logo"/>
+			Florida State University (Jan 2025 – Present; Expected graduation: 2026)
+		  </p>
+		</div>
       </section>
 
       <!-- Skills Section -->
@@ -172,25 +175,60 @@
             <div class="skill-category child programming">
               <h3 class="child">Programming:</h3>
               <ul>
-				 <li class="child">
+				 <li class="child skill-item" style="--score:5/10">
 					<img src="icons/icon-cpp.png" alt="C++" aria-hidden="true" class="child skill-icon">
 					C++
+					<img
+					src="lvl/cpp.png"
+					alt="Proficiency: 5 out of 10"
+					class="skill-bar"
+					data-proficiency="5/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 5/10</span>
 				 </li>
-				 <li class="child">
+				 <li class="child skill-item" style="--score:3/10">
 					<img src="icons/icon-python.png" alt="Python" aria-hidden="true" class="child skill-icon">
 					Python
+					<img
+					src="lvl/python.png"
+					alt="Proficiency: 3 out of 10"
+					class="skill-bar"
+					data-proficiency="3/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 3/10</span>
 				 </li>
-				 <li class="child">
+				 <li class="child skill-item" style="--score:6/10">
 					<img src="icons/icon-java.png" alt="Java" aria-hidden="true" class="child skill-icon">
 					Java
+					<img
+					src="lvl/java.png"
+					alt="Proficiency: 6 out of 10"
+					class="skill-bar"
+					data-proficiency="6/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 6/10</span>
 				 </li>
-				 <li class="child">
+				 <li class="child skill-item" style="--score:4/10">
 					<img src="icons/icon-js.png" alt="JavaScript" aria-hidden="true" class="child skill-icon">
 					JavaScript
+					<img
+					src="lvl/javascript.png"
+					alt="Proficiency: 4 out of 10"
+					class="skill-bar"
+					data-proficiency="4/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 4/10</span>
 				 </li>
-				 <li class="child">
+				 <li class="child skill-item" style="--score:5/10">
 					<img src="icons/icon-bash.png" alt="Bash" aria-hidden="true" class="child skill-icon">
 					Bash
+					<img
+					src="lvl/bash.png"
+					alt="Proficiency: 5 out of 10"
+					class="skill-bar"
+					data-proficiency="5/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 5/10</span>
 				 </li>
 			  </ul>
             </div>
@@ -199,25 +237,60 @@
             <div class="skill-category child">
               <h3 class="child">Applications:</h3>
               <ul>
-                <li class="child">
-				<img src="icons/icon-devops.png" alt="Azure Devops" aria-hidden="true" class="child skill-icon">
+                <li class="child skill-item">
+				<img src="icons/icon-devops.png" style="--score:7/10" alt="Azure Devops" aria-hidden="true" class="child skill-icon">
 				Azure DevOps
+				<img
+					src="lvl/devops.png"
+					alt="Proficiency: 7 out of 10"
+					class="skill-bar"
+					data-proficiency="7/10"
+				  />
+					<span class="skill-tooltip">Proficiency: 7/10</span>					  
 				</li>
-                <li class="child">
-				<img src="icons/icon-jira.png" alt="Jira" aria-hidden="true" class="child skill-icon">
+                <li class="child skill-item">
+				<img src="icons/icon-jira.png" style="--score:7/10" alt="Jira" aria-hidden="true" class="child skill-icon">
 				Jira
+					<img
+					src="lvl/jira.png"
+					alt="Proficiency: 7 out of 10"
+					class="skill-bar"
+					data-proficiency="7/10"
+					/>	
+					<span class="skill-tooltip">Proficiency: 7/10</span>	
 				</li>
-                <li class="child">
-				<img src="icons/icon-officesuite.png" alt="Office Suite" aria-hidden="true" class="child skill-icon">
+                <li class="child skill-item">
+				<img src="icons/icon-officesuite.png" style="--score:8/10" alt="Office Suite" aria-hidden="true" class="child skill-icon">
 				Office Suite
+					<img
+					src="lvl/office.png"
+					alt="Proficiency: 8 out of 10"
+					class="skill-bar"
+					data-proficiency="8/10"
+					/>
+				<span class="skill-tooltip">Proficiency: 8/10</span>					
 				</li>
-				<li class="child">
-				<img src="icons/icon-git.png" alt="Git" aria-hidden="true" class="child skill-icon">
+				<li class="child skill-item">
+				<img src="icons/icon-git.png" alt="Git" style="--score:6/10" aria-hidden="true" class="child skill-icon">
 				Git
+					<img
+					src="lvl/git.png"
+					alt="Proficiency: 6 out of 10"
+					class="skill-bar"
+					data-proficiency="6/10"
+					/>
+					<span class="skill-tooltip">Proficiency: 6/10</span>
 				</li>
-				<li class="child">
-				<img src="icons/icon-android.png" alt="Android Studio" aria-hidden="true" class="child skill-icon">
+				<li class="child skill-item">
+				<img src="icons/icon-android.png" style="--score:5/10" alt="Android Studio" aria-hidden="true" class="child skill-icon">
 				Android Studio
+					<img
+					src="lvl/androidstudio.png"
+					alt="Proficiency: 5 out of 10"
+					class="skill-bar"
+					data-proficiency="5/10"
+					/>			
+					<span class="skill-tooltip">Proficiency: 5/10</span>					
 				</li>
               </ul>
             </div>
@@ -275,35 +348,48 @@
           <h2 class="child">Contact Me!</h2>
           <div class="contact-content child">
             <div class="contact-info">
-              <p class="child">Phone: 850-545-0672</p>
               <p class="child">
-                Email:
-                <a href="mailto:jason.westmark@gmail.com"
-                  >jason.westmark@gmail.com</a
-                >
+			       <a href="tel:+18505450671" class="contact-item phone-link">
+					<img class="phone" src="icons/phone.png" alt="Call me!" />
+					<span>(850) 545-0671</span>
+				  </a>
+			  </p>
+              <p class="child">
+				<a href="mailto:jason.westmark@gmail.com">
+				  <img class="email" src="icons/email.png" alt="My Email (jason.westmark@gmail.com)"/> jason.westmark@gmail.com
+				</a>
               </p>
               <p class="child">
-                <a
-                  href="https://www.linkedin.com/in/jason-westmark-ln/"
-                  target="_blank"
-                  rel="noopener"
-                  >LinkedIn</a
-                >
-                |
-                <a
-                  href="https://github.com/jasondubbleu"
-                  target="_blank"
-                  rel="noopener"
-                  >GitHub</a
-                >
-                |
-                <a
-                  href="https://bitbucket.org/jasonwestmark/workspace/overview/"
-                  target="_blank"
-                  rel="noopener"
-                  >BitBucket</a
-                >
-              </p>
+				  <a
+					href="https://www.linkedin.com/in/jason-westmark-ln/"
+					target="_blank"
+					rel="noopener"
+					class="social-link linkedin"
+				  >
+					<img src="icons/linkedin.png" alt="LinkedIn" />
+					<span>LinkedIn</span>
+				  </a>
+				  <span class="separator">|</span>
+				  <a
+					href="https://github.com/jasondubbleu"
+					target="_blank"
+					rel="noopener"
+					class="social-link github"
+				  >
+					<img src="icons/github.png" alt="GitHub" />
+					<span>GitHub</span>
+				  </a>
+				  <span class="separator">|</span>
+				  <a
+					href="https://bitbucket.org/jasonwestmark/workspace/overview/"
+					target="_blank"
+					rel="noopener"
+					class="social-link bitbucket"
+				  >
+					<img src="icons/bitbucket.png" alt="BitBucket" />
+					<span>BitBucket</span>
+				  </a>
+				</p>
             </div>
           </div>
         </div>
@@ -395,6 +481,29 @@
         }
       }
     </script>
+	
+	<script>
+  // Create a single tooltip element and add to the page
+  const tooltip = document.createElement('div');
+  tooltip.className = 'skill-tooltip';
+  document.body.appendChild(tooltip);
+
+  // For every bar image
+  document.querySelectorAll('.skill-bar').forEach(bar => {
+    // On mouse move over the bar, update text & position
+    bar.addEventListener('mousemove', e => {
+      const text = bar.dataset.proficiency;
+      tooltip.textContent = `Proficiency: ${text}`;
+      tooltip.style.left = e.clientX + 'px';
+      tooltip.style.top  = e.clientY + 'px';
+      tooltip.style.opacity = '1';
+    });
+    // On leaving the bar, hide the tooltip
+    bar.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = '0';
+    });
+  });
+</script>
 
     <script src="main.js"></script>
   </body>
