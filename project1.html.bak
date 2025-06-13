@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>StepTrack</title>
+    <link rel="stylesheet" href="project1.css" />
+  </head>
+
+  <body>
+    <div class="content-wrapper">
+		
+        <!-- Back to Home Button -->
+		<div class="home-btn">
+			<a href="https://jasondubbleu.github.io/interactive-resume/" class="download-buttons">Back to Home</a>
+		</div>
+		
+
+		<!-- Main chunk of website - all the content is displayed here. -->
+		<div class="main-content project">	
+		
+			<!-- This section is split into two columns. The left side will contain an image of the product, while
+			the right will contain the title and description. -->
+			<div class="section columns">
+			
+
+			<!-- LEFT COLUMN -->
+				<div class="left">
+					<div class="image">
+						<img src="img/steptrack.png">
+					</div>
+					<div class="description">
+						<p>StepTrack is a locally stored browser-based tool I created to assist with regression testing processes.</p>
+					</div>
+				</div>
+			<!-- END OF LEFT COLUMN-->
+			
+			
+			<!-- RIGHT COLUMN -->
+				<div class="right">
+					<div class="slideshow">
+						<div class="slide">
+							<img src="img/main.png" style="display: block;" />
+						</div>
+						<div class="slide">
+							<img src="img/notes.png"/>
+						</div>
+						<div class="slide">
+							<img src="img/closeup.png"/>
+						</div>
+						<button onclick="changeSlide(-1)">⟨</button>
+						<button onclick="changeSlide(1)">⟩</button>
+					</div>
+				</div>
+				<!-- END OF RIGHT COLUMN -->
+			</div>
+			<!-- END OF SECTION COLUMNS-->
+		
+		<!-- Here I will discuss why I created it, my thought process, which languages run the logic (JS),
+		and a list of the site's features. -->
+		<div id="bottom" class="section details">
+		
+			<div class="details-left">
+				
+				<div class="description background">
+					<h2>Description</h2>
+					<p>A custom-built, browser-based application that supports multi-tab regression testing workflows. 
+					The tool enables testers to review and annotate individual test steps, pin critical lines, 
+					track progress, and save personalized notes per tab. It includes export functionality to generate 
+					timestamped reports, supports persistent session state via Base64 encoding, and is fully client-specific 
+					through local and session storage. The entire application runs locally in the browser with no internet 
+					connection required, ensuring offline usability and full data privacy.</p>
+					
+					<p>I independently built and tested the application from scratch, designing both its interface 
+					and underlying functionality. My responsibilities included UI layout, Base64 data handling, 
+					local/session storage integration, and user interaction design.</p>
+				</div>
+			</div>
+			
+			<div class="details-right background">
+			
+				<div class="languages">
+					<h2>Languages Used</h2>
+					<p>I developed the site’s structure and styling with HTML and CSS, and handled 
+					all interactive logic and functionality using vanilla JavaScript.</p>
+				</div>
+				
+				<div class="links">
+					<h2>Download</h2>
+					<p>Download the application yourself for free from my Github by clicking the image below:</p>
+					<p>
+						<a href="https://github.com/jasondubbleu/steptrack">
+						<img src="icons/github.png"/>
+						</a>
+					</p>
+				</div>
+			
+			</div>
+		</div>
+			<div class="features section background">
+				<h2>Features</h2>
+				<il>
+					<li>Displays testing steps one at a time for the user.</li>
+					<li>Users are able to mark testing steps as Passed, Failed, or N/A.</li>
+					<li>Notes functionality that allows users to store important information during testing.</li>
+					<li>Each Tab stores it's own notes, comments, statuses, and positions using sessionStorage.</li>
+					<li>Users are able to download a tab's current state as a text file.</li>
+					<li>Built for privacy, the application runs entirely offline with no network dependencies, making it safe for storing and reviewing sensitive regression data.
+				</il>
+			</div>	
+		</div>
+    </div>
+  </body>
+
+<!-- Slideshow JavaScript -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  let slideInterval = null;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('show'));
+    slides[index].classList.add('show');
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+    resetSlideshowTimer(); // 🔁 reset timer on user action
+  }
+
+  function startSlideshow() {
+    slideInterval = setInterval(() => {
+      changeSlide(1);
+    }, 5000); // Change every 5 seconds
+  }
+
+  function resetSlideshowTimer() {
+    clearInterval(slideInterval);
+    startSlideshow();
+  }
+
+  // Initialize
+  showSlide(currentSlide);
+  startSlideshow();
+</script>
+
+<!-- Fade-in JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded");
+
+  // 1) FADE-IN LOGIC (unchanged)
+  const fadeInElements = document.querySelectorAll(".fade-in-section");
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -20px 0px",
+    threshold: 0.1
+  };
+  const fadeObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  fadeInElements.forEach(el => fadeObserver.observe(el));
+</script>
+
+</html>

@@ -24,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2) NAV-DIAL POINTER + SCROLL-SPY
   const ANGLES = {
     summary:    -30,
-    goals:      30,
-    experience: 90,
-    skills:     150,
-    hobbies:    210,
-    contact:    270
+    goals:      18,
+    experience: 70,
+    skills:     125,
+	projects:   180,
+    hobbies:    235,
+    contact:    290
   };
 
   const pointerEl  = document.querySelector(".dial-pointer");
@@ -81,6 +82,7 @@ window.addEventListener("scroll", () => {
     setActiveLabel(active);
   }, 100);  // 100ms debounce delay
 });
+
 	  // Initialize on page load
 	rotatePointer(ANGLES["summary"]);
 	setActiveLabel("summary");
@@ -98,3 +100,4 @@ function toggleDetails(id) {
     btn.textContent = "−";
   }
 }
+

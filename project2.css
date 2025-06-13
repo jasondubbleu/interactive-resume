@@ -1,0 +1,155 @@
+/* Button stylings - ripped straight from my interactive resume. */
+.home-btn {
+  display: flex;
+  gap: 1rem;             /* space between buttons */
+  margin-top: .5rem;
+  padding-top: .75rem;   /* space above the buttons */
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Style for each “download” button */
+.download-buttons {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;   /* light-gray border */
+  background-color: #fff;   /* white background */
+  color: #555;              /* gray text */
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.download-buttons:hover {
+  background-color: #f5f5f5; /* subtle hover shade */
+}
+/* End of button stylings */
+
+/* Global Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0 0 4rem 0;           /* add bottom padding for extra scroll space */
+  line-height: 1.6;
+  background: linear-gradient(
+    to bottom,
+    #f0f0f0 0%,
+    #8a8a8a 100%
+  );
+}
+
+/* This is the box that everything sits inside */
+.content-wrapper {
+  background-color: #ffffff;             /* pure white */
+  border-radius: 20px;                   /* round the corners */
+  margin: 4rem auto 50rem auto;          /* vertical spacing above & massive spacing below */
+  max-width: 1200px;                      /* constrain overall width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* very soft drop shadow */
+  overflow: hidden;
+}
+
+.section {
+	padding: 2rem 4rem;
+	margin: auto 2rem;
+}
+
+/* Little squares to go around sections */
+.background {
+	background-color: #ececec;
+	border-radius: 15px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding-top: .25rem;
+	padding-bottom: .5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+/* End of Global Styles */
+
+/* Section Specific Styles (everything else) */
+
+.left.background, .details-right.background {
+	background-color: #e2faff;
+}
+
+/* Contains left and right */
+.columns {
+  display: flex;
+  flex-direction: row;     /* side-by-side */
+  justify-content: center; /* center the pair */
+  align-items: stretch;    /* make them same height */
+  gap: 15px;
+  border-bottom-color: #ccc;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  
+}
+
+.left, .right {
+  min-width: 0;
+}
+
+/* RIGHT COLUMN */
+.right {
+  flex: 2.25;
+}
+
+.left {
+	flex: 1;
+	text-align: center;
+}
+
+.contribution {
+	margin: 2rem 6rem 0rem 6rem;
+}
+
+/* Contains details-left and details-right */
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 4rem;
+}
+
+#bottom {
+	padding-bottom: 0rem;
+	margin-top: -1rem;
+}
+
+.details-left {
+	flex: 2;
+}
+
+.details-left .description {
+	height: 450px;
+}
+
+.details-right {
+	flex: 1;
+}
+
+.details-right .links img {
+	max-width: 75px;
+	height: auto;
+	display: block;
+    margin: 0 auto;
+	padding: 1rem;
+	border: solid 2px #ccc;
+	border-radius: 15px;
+	background-color: #f6f6f6;
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem; /* optional spacing between images */
+  justify-content: center; /* or flex-start, space-between, etc. */
+  align-items: center; /* vertical alignment */
+}
+
+.image-row img {
+  max-width: 100%;
+  height: auto;
+}
+

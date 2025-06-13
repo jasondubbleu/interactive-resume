@@ -25,10 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const ANGLES = {
     summary:    -30,
     goals:      30,
-    experience: 90,
-    skills:     150,
-    hobbies:    210,
-    contact:    270
+    experience: 80,
+    skills:     125,
+	projects:   180,
+    hobbies:    235,
+    contact:    280
   };
 
   const pointerEl  = document.querySelector(".dial-pointer");
@@ -99,3 +100,4 @@ function toggleDetails(id) {
     btn.textContent = "−";
   }
 }
+

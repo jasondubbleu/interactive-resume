@@ -382,6 +382,26 @@ body {
   color: #000;
 }
 
+.experience-details ul {
+  /* keep the fade/opacity rules you already have */
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  
+  /* New: bullets visible again */
+  list-style-type: circle;        /* or disc, square, whatever shape */
+  list-style-position: outside;   /* marker sits in the padding */
+  
+  /* Give room for the bullets */
+  margin: 0;                      
+  padding-left: 1.5rem;           /* indent the list so bullets show */
+}
+
+/* When expanded, fade in */
+.experience-details.expanded ul {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
 /* ===================
    SKILLS SECTION STYLES
    =================== */
@@ -422,7 +442,7 @@ body {
 #skills h2 {
 	background-image: URL('img/skills.png');
 	margin: 0rem -5rem 0rem -5rem;
-	padding: 3rem;
+	padding: 2rem;
 	color: #FFFFFF;
 }
 
@@ -598,6 +618,64 @@ body {
 
 .goal-category.personal p {
 	color: #ffffff;
+}
+
+/* ========================
+   PROJECTS SECTION STYLES
+   ======================== */
+
+#projects h2 {
+	background-image: URL('img/summary-title.png');
+	margin: -2.99rem -5rem 0rem -5rem;
+	padding: 2rem;
+	color: #FFFFFF;
+}
+
+#projects {
+	margin-top: -3rem;
+	padding-bottom: 0rem;
+	background-color: white;
+  /* radial gradient: white in center, gray at edges */
+  background-image: radial-gradient(
+    circle at center,
+    white 0%,       /* start pure white right at the middle */
+    white 60%,      /* hold white out to 60% of the radius */
+    #ccc 100%       /* fade to gray by the edge */
+  );
+}
+
+.project {
+	text-align: left;
+}
+
+.project a {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  width: 93%;
+  text-decoration: none;
+  color: #0b337f;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+}
+
+.project a:hover {
+	background-color: #ccc; 
+	border-radius: 15px;
+}
+
+.project1 {
+	width: 100%;
+}
+
+.project img {
+	width: 100px;
+	height: auto;
+	padding-right: 2rem;
+}
+
+.project2 {
+	border-top: 2px solid #ccc;
 }
 
 /* ==========================
@@ -837,7 +915,7 @@ body {
 /* Position the navigation dial fixed at bottom-right */
 .nav-dial {
   position: fixed;
-  bottom: 124px;
+  bottom: 140px;
   right: 140px;
   width: 120px;            /* diameter of the dial */
   height: 120px;
@@ -896,10 +974,10 @@ body {
   left: 50%;
   transform:
     rotate(var(--angle)) 
-    translate(0, -125px)               /* distance from center */
+    translate(0, -120px)               /* distance from center */
     rotate(calc(var(--angle) * -1))   /* keep text upright */
-    translateX(-50%) 
-    translateY(-16px);                 /* slight upward shift */
+    translateX(-51%) 
+    translateY(-25px);                 /* slight upward shift */
   text-decoration: none;
   color: #0b337f;
   font-size: 1.25rem;

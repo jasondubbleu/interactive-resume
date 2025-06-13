@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>BitBucket Guide</title>
+    <link rel="stylesheet" href="project2.css" />
+  </head>
+
+  <body>
+    <div class="content-wrapper">
+	
+		<!-- Back to Home Button -->
+		<div class="home-btn">
+			<a href="https://jasondubbleu.github.io/interactive-resume/" class="download-buttons">Back to Home</a>
+		</div>
+		
+
+		<!-- Main chunk of website - all the content is displayed here. -->
+		<div class="main-content project">
+		
+			<!-- This section is split into two columns. The left side will contain an image of the product, while
+			the right will contain the title and description. -->
+			<div class="section columns">
+			
+
+			<!-- LEFT COLUMN -->
+				<div class="left background">
+					<div class="title">
+						<h2>BitBucket Setup Guide</h2>
+					</div>
+					<div class="description">
+						<p>A beginner-friendly Bitbucket guide in the form of a PDF tailored for FSU students who are new to 
+						distributed version control systems and Git-based repositories.</p>
+					</div>
+				</div>
+			<!-- END OF LEFT COLUMN-->
+			
+			
+			<!-- RIGHT COLUMN -->
+				<div class="right background">
+					<h2>Description</h2>
+					<p>This project is a comprehensive setup guide for students learning Git and Bitbucket for the first time. 
+					It walks users through installing GitBash, creating local and online repositories, generating SSH keys, 
+					and securely linking those repositories. The guide is tailored for Windows users at Florida State University,
+					especially those unfamiliar with version control systems, and is designed to reduce confusion and prevent common errors. 
+					It focuses on clear language, visual references, and step-by-step instructions to help students establish a working 
+					repository structure for use in future coursework.</p>
+				</div>
+				<!-- END OF RIGHT COLUMN -->
+			</div>
+			<!-- END OF SECTION COLUMNS-->
+			
+			
+			<div class="contribution section background">
+				<h2>My Role</h2>
+				<p>I independently researched, wrote, and designed the entire guide, from content structure to final 
+				formatting. Every step, definition, and screenshot was created and selected by me to ensure clarity 
+				and accuracy for first-time users. During peer review, no changes were recommended, which reinforced 
+				the guide’s effectiveness. This project reflects my ability to break down technical processes into 
+				accessible, user-friendly documentation.</p>
+			</div>
+			<div id="bottom" class="section details">
+				<div class="details-left">
+				
+					<div class="features background">
+						<h2>Features</h2>
+						<p>
+						<ul>
+						  <li>Step-by-step walkthrough specifically for FSU students using Windows</li>
+						  <li>Beginner-friendly definitions of key concepts like Git, repositories, and SSH</li>
+						  <li>Guided installation and configuration of GitBash</li>
+						  <li>Structured creation of local repositories organized by course</li>
+						  <li>Clear instructions for creating and configuring a Bitbucket account</li>
+						  <li>Secure SSH key generation and integration with Bitbucket</li>
+						  <li>Instructions for linking local and online repositories using Git commands</li>
+						  <li>Built-in testing and troubleshooting tips for common setup issues</li>
+						  <li>Visual aids and screenshots for clarity and ease of understanding</li>
+						  <li>External references and resource links for additional support</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+				
+				<div class="details-right background">
+					
+					<div class="links">
+						<h2>Download</h2>
+						<p>You can find the original project on my Github by clicking the icon below, or 
+						download the file directly by clicking the PDF icon:</p>
+						<div class="image-row">
+							<a href="https://github.com/jasondubbleu/steptrack">
+								<img src="icons/github.png"/>
+							</a>
+							<a href="files/bitbucket-setup.pdf" download class="download-button">
+								<img src="icons/pdfdownload.png"/>
+							</a>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+		
+		
+		</div>
+	
+	</div>
+  </body>  
+ </html>
