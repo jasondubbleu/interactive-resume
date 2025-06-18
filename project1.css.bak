@@ -31,7 +31,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 0 0 4rem 0;           /* add bottom padding for extra scroll space */
   line-height: 1.6;
   background: linear-gradient(
     to bottom,
@@ -44,10 +43,16 @@ body {
 .content-wrapper {
   background-color: #ffffff;             /* pure white */
   border-radius: 20px;                   /* round the corners */
-  margin: 4rem auto 50rem auto;          /* vertical spacing above & massive spacing below */
+  margin: 4rem auto 4rem auto;          /* vertical spacing above & massive spacing below */
   max-width: 1200px;                      /* constrain overall width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* very soft drop shadow */
   overflow: hidden;
+    background-image: radial-gradient(
+    circle at center,
+    white 0%,       /* start pure white right at the middle */
+    white 60%,      /* hold white out to 60% of the radius */
+    #ccc 100%       /* fade to gray by the edge */
+  );
 }
 
 .section {
@@ -65,9 +70,7 @@ body {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
-
 /* End of Global Styles */
-
 
 
 

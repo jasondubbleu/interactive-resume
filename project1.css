@@ -31,7 +31,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 0 0 4rem 0;           /* add bottom padding for extra scroll space */
   line-height: 1.6;
   background: linear-gradient(
     to bottom,
@@ -44,7 +43,7 @@ body {
 .content-wrapper {
   background-color: #ffffff;             /* pure white */
   border-radius: 20px;                   /* round the corners */
-  margin: 4rem auto 50rem auto;          /* vertical spacing above & massive spacing below */
+  margin: 4rem auto 4rem auto;          /* vertical spacing above & massive spacing below */
   max-width: 1200px;                      /* constrain overall width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* very soft drop shadow */
   overflow: hidden;
@@ -217,6 +216,7 @@ body {
     margin: 0 auto;
 	padding: 1rem;
 	border: solid 2px #ccc;
+	border-radius: 15px;
 }
 
 .features {
